@@ -80,12 +80,12 @@ Le dataset FakeNewsNet contient des articles collectés depuis deux sources de f
 
 ### ⬜ Phase 5 — Modèle Baseline
 
-- [ ] Écrire `src/baseline.py`
-  - [ ] Vectorisation TF-IDF
-  - [ ] Entraînement Logistic Regression
-  - [ ] Évaluation : accuracy, precision, recall, F1
-  - [ ] Sauvegarder le modèle dans `models/`
-- [ ] Obtenir un premier score de référence à battre
+- [x] Écrire `src/baseline.py`
+  - [x] Vectorisation TF-IDF
+  - [x] Entraînement Logistic Regression
+  - [x] Évaluation : accuracy, precision, recall, F1
+  - [x] Sauvegarder le modèle dans `models/`
+- [x] Obtenir un premier score de référence à battre
 
 ---
 
