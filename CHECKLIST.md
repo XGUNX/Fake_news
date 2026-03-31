@@ -68,13 +68,13 @@ Le dataset FakeNewsNet contient des articles collectés depuis deux sources de f
 
 ### ⬜ Phase 4 — Preprocessing
 
-- [ ] Écrire `src/preprocess.py` en s'appuyant sur ce qu'on a testé dans `02_experiments.ipynb`
-  - [ ] Fonction de chargement et fusion des 4 CSV
-  - [ ] Fonction de nettoyage du texte
-  - [ ] Fonction de combinaison titre + corps
-  - [ ] Fonction de split train / val / test
-  - [ ] Fonction de construction du vocabulaire BiLSTM
-  - [ ] Sauvegarder les données nettoyées dans `data/processed/`
+- [x] Écrire `src/preprocess.py` en s'appuyant sur ce qu'on a testé dans `02_experiments.ipynb`
+  - [x] Fonction de chargement et fusion des 4 CSV
+  - [x] Fonction de nettoyage du texte
+  - [x] Fonction de combinaison titre + corps
+  - [x] Fonction de split train / val / test
+  - [x] Fonction de construction du vocabulaire BiLSTM
+  - [x] Sauvegarder les données nettoyées dans `data/processed/`
 
 ---
 
