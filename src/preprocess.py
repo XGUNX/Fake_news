@@ -1,9 +1,27 @@
 # =============================================================================
 # preprocess.py
 # -----------------------------------------------------------------------------
-# Tout ce qui touche au chargement et nettoyage des données.
-# On a testé toutes ces fonctions dans 02_experiments.ipynb avant de les écrire ici.
+# Ce fichier gère toute l’étape de prétraitement des données textuelles.
+#
+# Objectif :
+# Transformer des articles bruts en données propres, organisées et prêtes
+# pour l’apprentissage automatique et le deep learning.
+#
+# Étapes suivies dans ce fichier :
+# . Charger et fusionner les fichiers CSV du dataset
+# . Ajouter les labels (fake / real) et les sources
+# . Nettoyer les colonnes textuelles (title, text)
+# . Combiner le titre et le corps de l’article
+# . Séparer les données en train / validation / test
+# . Construire le vocabulaire pour le modèle BiLSTM
+# . Convertir les textes en représentations exploitables
+# . Sauvegarder les données prétraitées pour une réutilisation rapide
+#
+# Toutes ces fonctions ont d’abord été testées dans 02_experiments.ipynb
+# avant d’être intégrées dans ce script final.
 # =============================================================================
+
+
 
 import os
 import re

@@ -1,12 +1,29 @@
 # =============================================================================
 # baseline.py
 # -----------------------------------------------------------------------------
-# Modèle de référence : TF-IDF + Régression Logistique
-# C'est le modèle le plus simple qu'on peut faire sur ce problème.
-# Il ne fait pas de deep learning — pas de réseau de neurones, pas de PyTorch.
-# Son rôle c'est de nous donner un score minimal à dépasser avec BiLSTM et RoBERTa.
-# Si nos modèles deep learning font moins bien que ça, c'est qu'il y a un problème.
+# Ce fichier implémente le modèle de référence (baseline) du projet :
+# TF-IDF + Régression Logistique.
+#
+# Objectif :
+# Construire un premier modèle simple, rapide et interprétable afin
+# d’obtenir une performance de base à comparer avec les modèles plus
+# avancés comme BiLSTM et RoBERTa.
+#
+# Étapes suivies dans ce fichier :
+# . Charger les données déjà prétraitées
+# . Transformer les textes en vecteurs numériques avec TF-IDF
+# . Entraîner une Régression Logistique sur les données d'entraînement
+# . Évaluer le modèle sur validation et test
+# . Afficher les métriques de performance
+# . Générer la matrice de confusion
+# . Sauvegarder le modèle et le vectorizer
+# . Permettre la prédiction sur de nouveaux textes
+#
+# Ce modèle sert de point de comparaison :
+# les modèles de deep learning doivent idéalement obtenir de meilleures
+# performances que cette baseline.
 # =============================================================================
+
 
 import os
 import sys
@@ -48,7 +65,7 @@ def get_tfidf_features(X_train, X_val, X_test):
     vectorizer = TfidfVectorizer(
         max_features=config.BASELINE_MAX_FEATURES,   # on garde les N mots les plus importants
         ngram_range=config.BASELINE_NGRAM_RANGE,     # unigrammes et bigrammes
-        sublinear_tf=True                             # applique log(tf) pour réduire l'effet des mots très fréquents
+        sublinear_tf=True                            # applique log(tf) pour réduire l'effet des mots très fréquents
     )
 
     # IMPORTANT : on fit uniquement sur le train, jamais sur val ou test

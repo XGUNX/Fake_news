@@ -132,10 +132,12 @@ BILSTM_NUM_LAYERS     = 2       # number of stacked BiLSTM layers
 BILSTM_DROPOUT        = 0.3     # dropout between layers (regularization)
 BILSTM_BIDIRECTIONAL  = True    # read sequences in both directions
 
-BILSTM_BATCH_SIZE     = 32
-BILSTM_EPOCHS         = 15
-BILSTM_LEARNING_RATE  = 1e-3
-BILSTM_PATIENCE       = 3       # early stopping: halt after N bad epochs
+# Entraînement
+BILSTM_BATCH_SIZE = 32          # Nombre d'articles par batch
+BILSTM_EPOCHS = 50              # Nombre maximum d'époques
+BILSTM_LEARNING_RATE = 0.001    # Learning rate initial (Adam)
+BILSTM_WEIGHT_DECAY = 1e-5      # Régularisation L2
+BILSTM_PATIENCE = 5             # Époques sans amélioration avant early stopping
 
 
 # =============================================================================
@@ -188,3 +190,5 @@ LABEL_MAP = {
 
 for _dir in [DATA_RAW_DIR, DATA_PROCESSED_DIR, MODELS_DIR, RESULTS_DIR]:
     os.makedirs(_dir, exist_ok=True)
+
+
