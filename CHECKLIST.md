@@ -91,30 +91,30 @@ Le dataset FakeNewsNet contient des articles collectés depuis deux sources de f
 
 ### ⬜ Phase 6 — Modèle BiLSTM
 
-- [ ] Écrire `src/dataset.py` — classe PyTorch Dataset pour charger les données
-- [ ] Écrire `src/bilstm.py` — architecture du modèle BiLSTM
-- [ ] Écrire `src/train.py` — boucle d'entraînement générique
-- [ ] Entraîner le BiLSTM et sauvegarder les poids dans `models/`
-- [ ] Comparer les résultats avec le baseline
+- [x] Écrire `src/dataset.py` — classe PyTorch Dataset pour charger les données
+- [x] Écrire `src/bilstm.py` — architecture du modèle BiLSTM
+- [x] Écrire `src/train.py` — boucle d'entraînement générique
+- [x] Entraîner le BiLSTM et sauvegarder les poids dans `models/`
+- [x] Comparer les résultats avec le baseline
 
 ---
 
 ### ⬜ Phase 7 — Modèle RoBERTa
 
-- [ ] Écrire `src/roberta_model.py` — wrapper RoBERTa pour la classification
-- [ ] Adapter `src/train.py` pour RoBERTa si nécessaire
-- [ ] Fine-tuner RoBERTa et sauvegarder les poids dans `models/`
-- [ ] Comparer les résultats avec les deux modèles précédents
+- [x] Écrire `src/roberta_model.py` — wrapper RoBERTa pour la classification
+- [x] Adapter `src/train.py` pour RoBERTa si nécessaire
+- [x] Fine-tuner RoBERTa et sauvegarder les poids dans `models/`
+- [x] Comparer les résultats avec les deux modèles précédents
 
 ---
 
 ### ⬜ Phase 8 — Évaluation
 
-- [ ] Écrire `src/evaluate.py`
-  - [ ] Calculer accuracy, precision, recall, F1 pour chaque modèle
-  - [ ] Générer les matrices de confusion
-  - [ ] Générer un graphique de comparaison des 3 modèles
-  - [ ] Sauvegarder tous les résultats dans `results/`
+- [x] Écrire `src/evaluate.py`
+  - [x] Calculer accuracy, precision, recall, F1 pour chaque modèle
+  - [x] Générer les matrices de confusion
+  - [x] Générer un graphique de comparaison des 3 modèles
+  - [x] Sauvegarder tous les résultats dans `results/`
 
 ---
 
