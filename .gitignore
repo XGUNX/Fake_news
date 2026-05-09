@@ -1,0 +1,12 @@
+# Models
+models/
+*.pt
+*.pth
+*.pkl
+
+# Data
+data/processed/
+
+# Python cache
+__pycache__/
+*.pyc

@@ -1,0 +1,53 @@
+# =============================================================================
+# requirements.txt
+# -----------------------------------------------------------------------------
+# All dependencies for the Fake News Detection project.
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# If you have a CUDA GPU, replace the torch line with:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# =============================================================================
+
+
+# --- Core scientific stack ---
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.13.0
+
+# --- Machine learning (baseline model) ---
+scikit-learn==1.4.1
+
+# --- Deep learning ---
+torch==2.2.1
+torchvision==0.17.1
+torchaudio==2.2.1
+
+# --- Transformers / RoBERTa ---
+transformers==4.39.1
+datasets==2.18.0               # HuggingFace helper (used for tokenization utilities)
+accelerate==0.29.2             # required by some transformers training utilities
+
+# --- Text preprocessing ---
+nltk==3.8.1
+regex==2023.12.25
+
+# --- Visualization (EDA + results) ---
+matplotlib==3.8.3
+seaborn==0.13.2
+wordcloud==1.9.3               # word cloud plots in the exploration notebook
+
+# --- Notebook environment ---
+jupyter==1.0.0
+ipykernel==6.29.3
+ipywidgets==8.1.2              # enables tqdm progress bars inside notebooks
+
+# --- Progress bars ---
+tqdm==4.66.2
+
+# --- Streamlit demo app ---
+streamlit==1.32.2
+
+# --- Utilities ---
+python-dotenv==1.0.1           # clean environment variable management (optional)
